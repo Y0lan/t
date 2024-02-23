@@ -28,6 +28,20 @@ The token staking program has the following features:
 
 This project has been developed using the **Rust** language together with the **Anchor** library. To write tests **javascript** is used.
 
+### Installing rust
+
+Follow this: https://www.rust-lang.org/tools/install
+
+### Installing Solana CLI
+
+Follow this: https://docs.solanalabs.com/cli/install
+
+### Installing anchor
+
+Follow this: https://www.anchor-lang.com/docs/installation
+
+
+
 In the project folder the following structure is found:
 ```
 .
@@ -79,6 +93,72 @@ In the project folder the following structure is found:
 In the **./programs** folder, the program is found. The program is built via ```anchor build``` and then deployed to the cluster with ```anchor deploy```. Configuration must be done in the ```Anchor.toml``` file; the desired cluster to use for deployment must be specified ( mainnet, devnet, testnet, localnet), the owner of the program's keypair and the program ID. The file ```constants.rs``` contains important constant values, which must be configured before the initial build and deploy. It is important to note as well that when the program is initially built and deployed, it will return the program ID via the command line. This address must replace the placeholder address in ```lib.rs``` and ```Anchor.toml```, and then the program must be built and deployed again. 
 
 In the **./tests** folder, tests are found. Tests can be run using ```anchor run {name of the test}```. The various test names and functions can be found inside the ```Anchor.toml``` file. If any changes are made to the structs within the program it is important to update the `./spl-vault-idl.json` file with the new idl created in the `./target/idl` folder ( only created after build/deploy ) in order for the tests to work as expected.
+
+### Tests available:
+
+Below are the commands to run various tests for the SPL Token Staking Program. Only the owner of the program can perform some of these actions, as noted.
+
+#### Initialize Vault
+
+Only the owner of the program can initialize a vault.
+
+```bash
+npm test -- tests/components/initVault.js
+```
+
+#### Create Reward Schedule (APR)
+
+For the owner to create a reward schedule.
+
+```bash
+npm test -- tests/components/createTimeRewards.js
+```
+
+#### Add Rewards to Pool
+
+Where stakers will be paid from, by the owner.
+
+```bash
+npm test -- tests/components/addRewards.js
+```
+
+#### Initialize User Account in Vault
+
+Multiple accounts per user per vault can be initialized.
+
+```bash
+npm test -- tests/components/initAccount.js
+```
+
+#### Stake Tokens
+
+The amount to be staked will be distributed across all created accounts.
+
+```bash
+npm test -- tests/components/stakeTokens.js
+```
+
+#### Update Vault Values
+
+Such as rewards, lockup options/duration, etc.
+
+```bash
+npm test -- tests/components/updateVault.js
+```
+
+#### Store Gained Rewards
+
+Since the last store operation.
+
+```bash
+npm test -- tests/components/storeRewards.js
+```
+
+#### Withdraw Stored Rewards
+
+```bash
+npm test -- tests/components/withdrawRewards.js
+```
 
 ## Architecture Overview
 
