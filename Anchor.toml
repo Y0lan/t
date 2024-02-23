@@ -1,0 +1,43 @@
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[registry]
+url = "https://api.apr.dev"
+
+[programs.localnet]
+spl-vault = "1cBTAQ7XtS2MuhGanUh66rMWs92YWm1z2xBoERGj6gh"
+
+[scripts]
+#Initialize a vault, only the owner of the program can initialize a vault (owner)
+    test1 = "npm test -- tests/components/initVault.js"
+
+#CREATE reward schedule (APR) (owner)
+
+    test2 = "npm test -- tests/components/createTimeRewards.js"
+
+#ADD rewards to pool where stakers will be paid from (owner)
+
+    test3 = "npm test -- tests/components/addRewards.js"
+
+#INITIALIZE an account in that vault for a user, multiple accounts can be initialized
+#per user per vault
+
+    test4 = "npm test -- tests/components/initAccount.js"
+
+#STAKE tokens, the amount to be staked will be staked across all accounts created
+
+    test5 = "npm test -- tests/components/stakeTokens.js"
+
+#UPDATE the values of the vault (rewards, lockup option/duraction, etc)
+
+    test6 = "npm test -- tests/components/updateVault.js"
+
+#STORE rewards gained since last store
+
+    test7 = "npm test -- tests/components/storeRewards.js"
+
+#WITHDRAW the stored rewards
+
+    test8 = "npm test -- tests/components/withdrawRewards.js"
+
