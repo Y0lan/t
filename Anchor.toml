@@ -9,35 +9,26 @@ url = "https://api.apr.dev"
 spl-vault = "1cBTAQ7XtS2MuhGanUh66rMWs92YWm1z2xBoERGj6gh"
 
 [scripts]
-#Initialize a vault, only the owner of the program can initialize a vault (owner)
-    test1 = "npm test -- tests/components/initVault.js"
+# Initialize a vault (Only the owner can perform this action)
+test:initialize-vault = "npm test -- tests/components/initVault.js"
 
-#CREATE reward schedule (APR) (owner)
+# Create a reward schedule (APR) (Owner only)
+test:create-reward-schedule = "npm test -- tests/components/createTimeRewards.js"
 
-    test2 = "npm test -- tests/components/createTimeRewards.js"
+# Add rewards to the pool (For payout to stakers, Owner only)
+test:add-rewards = "npm test -- tests/components/addRewards.js"
 
-#ADD rewards to pool where stakers will be paid from (owner)
+# Initialize a user account within the vault (Supports multiple accounts per user)
+test:initialize-user-account = "npm test -- tests/components/initAccount.js"
 
-    test3 = "npm test -- tests/components/addRewards.js"
+# Stake tokens (Amount staked is distributed across all the user's accounts)
+test:stake-tokens = "npm test -- tests/components/stakeTokens.js"
 
-#INITIALIZE an account in that vault for a user, multiple accounts can be initialized
-#per user per vault
+# Update vault parameters (Rewards, lockup options/durations, etc.)
+test:update-vault = "npm test -- tests/components/updateVault.js"
 
-    test4 = "npm test -- tests/components/initAccount.js"
+# Store earned rewards since the last update
+test:store-rewards = "npm test -- tests/components/storeRewards.js"
 
-#STAKE tokens, the amount to be staked will be staked across all accounts created
-
-    test5 = "npm test -- tests/components/stakeTokens.js"
-
-#UPDATE the values of the vault (rewards, lockup option/duraction, etc)
-
-    test6 = "npm test -- tests/components/updateVault.js"
-
-#STORE rewards gained since last store
-
-    test7 = "npm test -- tests/components/storeRewards.js"
-
-#WITHDRAW the stored rewards
-
-    test8 = "npm test -- tests/components/withdrawRewards.js"
-
+# Withdraw stored rewards
+test:withdraw-rewards = "npm test -- tests/components/withdrawRewards.js"
