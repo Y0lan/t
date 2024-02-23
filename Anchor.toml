@@ -10,25 +10,25 @@ spl-vault = "1cBTAQ7XtS2MuhGanUh66rMWs92YWm1z2xBoERGj6gh"
 
 [scripts]
 # Initialize a vault (Only the owner can perform this action)
-test:initialize-vault = "npm test -- tests/components/initVault.js"
+initialize-vault = "npm test -- tests/components/initVault.js"
 
 # Create a reward schedule (APR) (Owner only)
-test:create-reward-schedule = "npm test -- tests/components/createTimeRewards.js"
+create-reward-schedule = "npm test -- tests/components/createTimeRewards.js"
 
 # Add rewards to the pool (For payout to stakers, Owner only)
-test:add-rewards = "npm test -- tests/components/addRewards.js"
+add-rewards = "npm test -- tests/components/addRewards.js"
 
 # Initialize a user account within the vault (Supports multiple accounts per user)
-test:initialize-user-account = "npm test -- tests/components/initAccount.js"
+initialize-user-account = "npm test -- tests/components/initAccount.js"
 
 # Stake tokens (Amount staked is distributed across all the user's accounts)
-test:stake-tokens = "npm test -- tests/components/stakeTokens.js"
+stake-tokens = "npm test -- tests/components/stakeTokens.js"
 
 # Update vault parameters (Rewards, lockup options/durations, etc.)
-test:update-vault = "npm test -- tests/components/updateVault.js"
+update-vault = "npm test -- tests/components/updateVault.js"
 
 # Store earned rewards since the last update
-test:store-rewards = "npm test -- tests/components/storeRewards.js"
+store-rewards = "npm test -- tests/components/storeRewards.js"
 
 # Withdraw stored rewards
-test:withdraw-rewards = "npm test -- tests/components/withdrawRewards.js"
+withdraw-rewards = "npm test -- tests/components/withdrawRewards.js"
