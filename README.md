@@ -30,6 +30,20 @@ The token staking program has the following features:
 
 This project has been developed using the **Rust** language together with the **Anchor** library. To write tests **javascript** is used.
 
+### Installing rust
+
+Follow this: https://www.rust-lang.org/tools/install
+
+### Installing Solana CLI
+
+Follow this: https://docs.solanalabs.com/cli/install
+
+### Installing anchor
+
+Follow this: https://www.anchor-lang.com/docs/installation
+
+
+
 In the project folder the following structure is found:
 ```
 .
