@@ -96,6 +96,72 @@ In the **./programs** folder, the program is found. The program is built via ```
 
 In the **./tests** folder, tests are found. Tests can be run using ```anchor run {name of the test}```. The various test names and functions can be found inside the ```Anchor.toml``` file. If any changes are made to the structs within the program it is important to update the `./spl-vault-idl.json` file with the new idl created in the `./target/idl` folder ( only created after build/deploy ) in order for the tests to work as expected.
 
+### Tests available:
+
+Below are the commands to run various tests for the SPL Token Staking Program. Only the owner of the program can perform some of these actions, as noted.
+
+#### Initialize Vault
+
+Only the owner of the program can initialize a vault.
+
+```bash
+npm test -- tests/components/initVault.js
+```
+
+#### Create Reward Schedule (APR)
+
+For the owner to create a reward schedule.
+
+```bash
+npm test -- tests/components/createTimeRewards.js
+```
+
+#### Add Rewards to Pool
+
+Where stakers will be paid from, by the owner.
+
+```bash
+npm test -- tests/components/addRewards.js
+```
+
+#### Initialize User Account in Vault
+
+Multiple accounts per user per vault can be initialized.
+
+```bash
+npm test -- tests/components/initAccount.js
+```
+
+#### Stake Tokens
+
+The amount to be staked will be distributed across all created accounts.
+
+```bash
+npm test -- tests/components/stakeTokens.js
+```
+
+#### Update Vault Values
+
+Such as rewards, lockup options/duration, etc.
+
+```bash
+npm test -- tests/components/updateVault.js
+```
+
+#### Store Gained Rewards
+
+Since the last store operation.
+
+```bash
+npm test -- tests/components/storeRewards.js
+```
+
+#### Withdraw Stored Rewards
+
+```bash
+npm test -- tests/components/withdrawRewards.js
+```
+
 ## Architecture Overview
 
 ![ProgramArchitecture](misc/staking_architecture.svg)
