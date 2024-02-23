@@ -1,6 +1,4 @@
 # SPL Token Staking Program
-
-
 ## Project Overview
 This program is a SPL token staking program. It lets the owner create a vault containing tokens in a reward pool and allows users to deposit their own tokens to farm rewards based on the APR set by the owner.
 

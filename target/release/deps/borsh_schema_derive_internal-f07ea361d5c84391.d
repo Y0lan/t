@@ -1,0 +1,10 @@
+/home/yolan/t/target/release/deps/borsh_schema_derive_internal-f07ea361d5c84391.rmeta: /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/lib.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/helpers.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/enum_schema.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/struct_schema.rs
+
+/home/yolan/t/target/release/deps/libborsh_schema_derive_internal-f07ea361d5c84391.rlib: /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/lib.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/helpers.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/enum_schema.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/struct_schema.rs
+
+/home/yolan/t/target/release/deps/borsh_schema_derive_internal-f07ea361d5c84391.d: /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/lib.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/helpers.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/enum_schema.rs /home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/struct_schema.rs
+
+/home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/lib.rs:
+/home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/helpers.rs:
+/home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/enum_schema.rs:
+/home/yolan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-schema-derive-internal-0.10.3/src/struct_schema.rs:
